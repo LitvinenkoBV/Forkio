@@ -1,0 +1,173 @@
+.pricing {
+  background: rgb(108, 84, 118);
+  background: radial-gradient(
+    circle,
+    rgba(108, 84, 118, 1) 0%,
+    rgba(124, 92, 95, 1) 20%,
+    rgba(74, 59, 78, 1) 50%
+  );
+  // .pricing__wrapper
+
+  &__wrapper {
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .pricing__title
+
+  &__title {
+    @include fontStyle(Montserrat, bold, 48px, 50px, $colorText);
+    padding: 83px 0 61px 0;
+    text-align: center;
+  }
+
+  // .pricing__list
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  // .pricing__item
+
+  &__item {
+    margin: 40px 10px 40px 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__item:nth-child(3) {
+    margin: 0 10px;
+    .pricing__content {
+      width: 299px;
+      background: rgba(77, 51, 73, 0.5);
+      .pricing__price {
+        font-size: 82px;
+        padding: 15px 0 15px 0;
+      }
+      .pricing__month::after {
+        margin: 46px auto 50px;
+      }
+      .pricing__button {
+        margin-top: 50px;
+      }
+    }
+    .pricing__subscription-title {
+      background: rgba(64, 45, 65, 0.5);
+    }
+  }
+
+  // .pricing__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: rgba(92, 80, 95, 0.5);
+  }
+
+  // .pricing__subscription-title
+
+  &__subscription-title {
+    @include fontStyle(Montserrat, 400, 24px, 24px, $colorText);
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 36px 0px;
+    background: rgba(126, 100, 106, 0.5);
+  }
+  // .pricing__price
+
+  &__price {
+    @include fontStyle(Montserrat, 400, 60px, 90px, $colorText);
+    text-transform: uppercase;
+    padding: 30px 0 20px 0;
+  }
+
+  // .pricing__month
+
+  &__month {
+    @include fontStyle(Montserrat, 400, 14px, 16px, $colorText);
+    text-transform: uppercase;
+  }
+  &__month::after {
+    content: "";
+    width: 60px;
+    height: 5px;
+    background: #8d81ac;
+    display: block;
+    margin: 38px auto 30px;
+  }
+
+  // .pricing__description
+
+  &__description {
+    @include fontStyle(Montserrat, 400, 16px, 18px, $colorText);
+    height: 98px;
+    padding: 0 35px 62px 35px;
+    text-align: center;
+  }
+
+  // .pricing__button
+
+  &__button {
+    @include fontStyle(Montserrat, 400, 15px, 15px, $colorText);
+    text-transform: uppercase;
+    background: #76616c;
+    padding: 15px 38px;
+    border-radius: 25px;
+    margin-bottom: 37px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  .pricing {
+    &__title {
+      font-size: 42px;
+      line-height: 44px;
+    }
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__item {
+      flex: 0 1 40%;
+      margin: 40px 10px;
+      width: 0;
+      max-width: 307px;
+    }
+    &__item:nth-child(3) {
+      max-width: 299px;
+    }
+    &__content {
+      width: 257px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .pricing {
+    &__title {
+      font-size: 28px;
+      line-height: 42px;
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item {
+      flex: 0 1 100%;
+      margin: 40px 10px;
+      width: 290px;
+    }
+    &__item:nth-child(3) {
+      width: 299px;
+    }
+    &__content {
+      width: 257px;
+    }
+  }
+}

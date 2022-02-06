@@ -1,0 +1,14 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@import "./constants.scss";
+@import "./mixin";
+@import "./nullstyle.scss";
+@import "./burger_menu";
+@import "./header";
+@import "./editor.scss";
+@import "./about_fork";
+@import "./what_you_get";
+@import "./pricing";

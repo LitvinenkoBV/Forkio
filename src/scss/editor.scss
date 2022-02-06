@@ -1,0 +1,85 @@
+.editor {
+  // .editor__wrapper
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  // .editor__title
+
+  &__title {
+    @include fontStyle(Montserrat, bold, 54px, 54px, #635c73);
+    text-align: center;
+    padding: 170px 0 35px 0;
+    text-transform: uppercase;
+  }
+
+  // .editor__text
+
+  &__text {
+    @include fontStyle(Lato, 400, 21px, 32px, #323232);
+    max-width: 861px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  // .editor__button
+
+  &__button {
+    font-size: 14px;
+    border: 1px solid #d5d5d5;
+    padding-left: 10px;
+    border-radius: 3px;
+    margin: 0 5px 0;
+  }
+
+  // .editor__amount
+
+  &__amount {
+    display: inline-block;
+    background: white;
+    padding: 5px 10px 5px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  .editor {
+    &__wrapper {
+      margin-bottom: 98px;
+    }
+    &__title {
+      font-size: 42px;
+      line-height: 42px;
+    }
+    &__text {
+      max-width: 689px;
+      padding-bottom: 24px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .editor {
+    &__wrapper {
+      margin-bottom: 88px;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 28px;
+    }
+    &__text {
+      max-width: 276px;
+      padding-bottom: 36px;
+    }
+    &__wrapper-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__button {
+      margin-top: 5px;
+    }
+  }
+}
